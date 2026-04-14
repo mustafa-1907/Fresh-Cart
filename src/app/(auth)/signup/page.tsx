@@ -44,7 +44,15 @@ return (
               </div>
               <div>
                 <h4 className="font-bold text-slate-900">Sarah Johnson</h4>
-                <div className="text-yellow-400 text-xs">⭐⭐⭐⭐⭐</div>
+                 <div className="flex items-center gap-0.5">
+                  {[...Array(5)].map((_, index) => (
+                    <Star
+                      key={index}
+                      size={14}
+                      className="fill-yellow-400 text-yellow-400"
+                    />
+                  ))}
+                </div>
               </div>
             </div>
             <p className="text-slate-600 italic text-sm leading-relaxed">
