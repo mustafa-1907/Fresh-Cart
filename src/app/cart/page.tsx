@@ -13,7 +13,6 @@ export default async function page() {
   const {  numOfCartItems, products, totalCartPrice } =
     await getUserCart();
 
-  console.log("product obj ", products);
 
   if (!products || products.length === 0) {
     return <EmptyCart />;
