@@ -62,10 +62,13 @@ export const nextAuthConfig: NextAuthOptions = {
             return token
         },
 
-        session(param) {
-            param.session.user.id = param.token.userID as string
-            return param.session;
-        }
+      session(param) {
+    if (param.session && param.session.user) {
+        (param.session.user as any).id = param.token.userID as string;
+    }
+    
+    return param.session;
+}
     }
 
 
