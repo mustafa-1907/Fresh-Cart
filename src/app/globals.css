@@ -7,7 +7,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
+  --font-sans: var(--font-exo);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -82,7 +82,15 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 }
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000 !important; /* جرب اللون الأسود أو الأبيض */
+  z-index: 50 !important; /* للتأكد أنها فوق الصورة */
+}
 
+.swiper-pagination-bullet-active {
+  background: #22c55e !important; /* لون النقاط النشطة */
+}
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
